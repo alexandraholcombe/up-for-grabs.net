@@ -108,6 +108,13 @@ label {
   display: inline-block;
 }
 
+button.popular-tag-button {
+  border: 0px solid transparent;
+  background: none;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
 p {
   margin: 10px 0 15px 0;
 }
@@ -584,6 +591,18 @@ form {
 .popular-tags li::before {
   content: ' ';
   margin-right: 12px;
+}
+
+.visually-hidden { 
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
 }
 
 @media (max-width: 768px) {

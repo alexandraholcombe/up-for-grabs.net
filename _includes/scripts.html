@@ -14,10 +14,10 @@
       <option value="<%-key%>"><%- entry.name%>  (<%-entry.frequency%>)</option>
     <% }) %>
     </select>
-    <h5>Popular tags: </h5>
-    <ul class="popular-tags">
+    <label id="filter-by-popular-tags">Popular tags:</label>
+    <ul class="popular-tags" aria-describedby="filter-by-popular-tags">
     <% _.each(popularTags, function(entry, key){ %>
-      <li><a href="#/tags/<%-encodeURIComponent(entry.name)%>"><%-entry.name%></a> (<%-entry.frequency%>)</li>
+      <li><button class="popular-tag-button"><span class="visually-hidden">Filter by tag:</span><a href="#/tags/<%-encodeURIComponent(entry.name)%>"><%-entry.name%></a> (<%-entry.frequency%>)</button></li>
     <% }) %>
     </ul>
   </div>
